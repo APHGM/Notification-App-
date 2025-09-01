@@ -28,3 +28,13 @@ It runs silently in the **system tray** and sends notifications whenever monitor
 ```bash
 git clone https://github.com/<your-username>/app-monitor.git
 cd app-monitor
+
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+pip install -r requirements.txt
+
+python app_monitor.py
+
+pip install pyinstaller
+pyinstaller --noconfirm --onefile --windowed app_monitor.py
